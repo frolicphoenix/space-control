@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet">
+
+    <title>Advanced Space Control Game</title>
+</head>
+<body>
+    <header>
+        <h1>Advanced Space Control Game</h1>
+        <div id="score">Score: 0</div>
+    </header>
+    <main>
+        <section id="viewport">
+            <img src="https://i.pinimg.com/originals/ee/3e/71/ee3e7172747d362091dfc3a8b4b43d9d.gif" id="spaceView" alt="Space View">
+        </section>
+        <section id="controls">
+            <button id="startButton" onclick="startGame()">Start Mission</button>
+            <button id="restartButton" onclick="restartGame()" disabled>Restart Mission</button>
+            <div id="tasks">No current task.</div>
+            <div class="sliders">
+                <label>Temperature Control:
+                    <input type="range" id="tempControl" min="0" max="100" step="1" disabled onchange="checkTaskCompletion()">
+                </label>
+                <label>Speed Control:
+                    <input type="range" id="speedControl" min="0" max="100" step="1" disabled onchange="checkTaskCompletion()">
+                </label>
+                <label>Shield Strength:
+                    <input type="range" id="shieldControl" min="0" max="100" step="1" disabled onchange="checkTaskCompletion()">
+                </label>
+            </div>
+            <div id="status">
+                <div>Power Level: <span id="powerLevel">100%</span></div>
+                <div>Fuel Level: <span id="fuelLevel">100%</span></div>
+                <div>Oxygen Level: <span id="oxygenLevel">100%</span></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
